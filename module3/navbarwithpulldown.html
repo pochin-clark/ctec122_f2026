@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure CSS Dropdown Navbar</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth; /* Smooth scrolling to sections */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #1e293b;
+    }
+
+    /* Fixed Navbar Container */
+    .navbar {
+      background-color: #1e293b;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    /* Top-level Menu List */
+    .nav-list {
+      display: flex;
+      list-style: none;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Nav Items & Links */
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item > a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+
+    .nav-item:hover > a {
+      background-color: #334155;
+    }
+
+    /* Dropdown Menu (Hidden by default) */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background-color: #ffffff;
+      list-style: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 0 0 4px 4px;
+      overflow: hidden;
+      display: none;
+    }
+
+    /* Dropdown Items & Links */
+    .dropdown-menu li a {
+      display: block;
+      padding: 0.75rem 1.25rem;
+      color: #334155;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #f1f5f9;
+      color: #2563eb;
+    }
+
+    /* Display Dropdown on Hover */
+    .has-dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Dropdown Arrow Indicator */
+    .has-dropdown > a::after {
+      content: " ▼";
+      font-size: 0.7rem;
+      margin-left: 0.3rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Page Content Sections */
+    .content {
+      margin-top: 55px; /* Offset for the fixed navbar */
+    }
+
+    section {
+      min-height: 80vh;
+      padding: 4rem 2rem;
+      border-bottom: 1px solid #e2e8f0;
+      scroll-margin-top: 55px; /* Ensures fixed navbar doesn't cover section headers */
+    }
+
+    section:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #475569;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="#home">Home</a>
+      </li>
+
+      <li class="nav-item has-dropdown">
+        <a href="#services">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="#web-dev">Web Development</a></li>
+          <li><a href="#design">UI/UX Design</a></li>
+          <li><a href="#seo">SEO Optimization</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item has-dropdown">
+        <a href="#products">Products</a>
+        <ul class="dropdown-menu">
+          <li><a href="#software">Software</a></li>
+          <li><a href="#hardware">Hardware</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Page Content Sections matching the anchor IDs -->
+  <main class="content">
+    <section id="home">
+      <h1>Home</h1>
+      <p>Welcome to our site. Use the top navigation menu or dropdowns to scroll directly to any section on this page.</p>
+    </section>
+
+    <section id="services">
+      <h1>Services Overview</h1>
+      <p>Discover our full range of technical and creative services tailored to your needs.</p>
+    </section>
+
+    <section id="web-dev">
+      <h1>Web Development</h1>
+      <p>We build responsive, fast, and modern web applications using modern web technologies.</p>
+    </section>
+
+    <section id="design">
+      <h1>UI/UX Design</h1>
+      <p>Designing user-centric interfaces and seamless digital experiences.</p>
+    </section>
+
+    <section id="seo">
+      <h1>SEO Optimization</h1>
+      <p>Optimize your web presence to reach higher search engine rankings and attract organic traffic.</p>
+    </section>
+
+    <section id="products">
+      <h1>Products Overview</h1>
+      <p>Explore our suite of software tools and high-performance hardware devices.</p>
+    </section>
+
+    <section id="software">
+      <h1>Software Solutions</h1>
+      <p>Discover scalable cloud software and local desktop tools built for productivity.</p>
+    </section>
+
+    <section id="hardware">
+      <h1>Hardware Products</h1>
+      <p>High-grade devices and components tailored for performance and reliability.</p>
+    </section>
+
+    <section id="contact">
+      <h1>Contact Us</h1>
+      <p>Get in touch with our team for questions, support, or inquiries.</p>
+    </section>
+  </main>
+
+</body>
+</html>
