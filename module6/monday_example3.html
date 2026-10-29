@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8">
+        <title>Monday - CSS Lecture</title>
+        <!--
+        Author:  PoChin Cheng
+        Date:    10/26/2026
+        Flexbox example 3
+        -->
+        <style>
+            main {
+                display: flex;
+            }
+            section {
+                flex-basis: 50%;
+                min-height: 10em;
+                background-color: azure;
+            }
+            aside {
+                flex-basis: 25%;
+                background-color: aquamarine;
+            }
+            header, footer {
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header><h2>Header</h2></header>
+        <main>
+            <aside><h2>Sidebar A</h2></aside>
+            <section><h2>Main content</h2></section>
+            <aside><h2>Sidebar B</h2></aside>
+        </main>
+        <footer><h2>Footer</h2></footer>
+    </body>
+</html>

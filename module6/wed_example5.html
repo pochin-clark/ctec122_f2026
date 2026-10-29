@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wednesday - Fluid Design Lecture</title>
+        <!--
+        Author:  PoChin Cheng
+        Date:    10/28/2026
+        Fluid Design example 1
+        -->
+        <style>
+            .fluid-card {
+                width: 90%;
+                font-size: clamp(1rem, 2.5vw, 1.25rem);
+            }
+            img {
+                max-width: 100%;  /* streches upto the width of the container */
+                height: auto; /* Preserve aspect ratio */
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <main class="fluid-card">
+            <h2>Fluid Design Container</h2>
+            <p>Resize your browser window. The box width, text size and image scale continously together</p>
+            <img src="https://picsum.photos/600/300" alt="Fluid placehold graphics">
+        </main>
+    </body>
+</html>

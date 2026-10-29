@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8">
+        <title>Wednesday - Flexbox Lecture</title>
+        <!--
+        Author:  PoChin Cheng
+        Date:    10/28/2026
+        Flexbox example 5
+        -->
+        <style>
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+            section {
+                order: 1;
+                background-color: azure;
+            }
+            aside {
+                order: 2;
+                background-color: aquamarine;
+            }
+            header, footer {
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header><h2>Header</h2></header>
+        <main>
+            <aside><h2>Sidebar A</h2></aside>
+            <section><h2>Main content</h2></section>
+            <aside><h2>Sidebar B</h2></aside>
+        </main>
+        <footer><h2>Footer</h2></footer>
+    </body>
+</html>

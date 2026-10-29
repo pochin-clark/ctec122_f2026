@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8">
+        <title>Wednesday - Flexbox Lecture</title>
+        <!--
+        Author:  PoChin Cheng
+        Date:    10/28/2026
+        Flexbox example grow
+        -->
+        <style>
+            main {
+                display: flex;
+            }
+            nav, aside {
+                flex-basis: 100px;
+                flex-grow: 1;
+            }
+            section {
+                flex-basis: 200px;
+                flex-grow: 3;
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <nav>Navigation</nav>
+            <section>Content</section>
+            <aside>Sidebar</aside>
+        </main>
+    </body>
+</html>
