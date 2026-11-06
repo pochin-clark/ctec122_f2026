@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Nav</title>
+    <!--
+    Author: PoChin Cheng
+    Date: 11.02.2026
+    -->
+    <style>
+        nav {
+            background-color: black;
+            width: 40%;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+        }
+        a {
+            color: white;
+            display: block;
+            padding: .5em 1em;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            text-decoration: underline;
+        }
+        a.current {
+            color: purple;
+            background-color:  lightgray;
+            text-decoration: none;
+        }
+        li {
+            /* padding: .5em 1em; */
+            margin: .25em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="current" href="speaker.html">Speakers</a></li>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    <section id="section1">
+        <h2>Section 1</h2>
+    </section>
+</body>
+</html>

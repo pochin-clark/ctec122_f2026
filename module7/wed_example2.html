@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav with Flexbox</title>
+    <!--
+    Author: PoChin Cheng
+    Date: 11.04.2026
+    -->
+    <style>
+        .navbar {
+            position: sticky;
+            top: 0;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+        .menu li:has(.submenu) {
+            position: relative;
+            &:hover > .submenu {
+                display: block;
+            }
+        }
+        .submenu {
+            position: absolute;
+            left: 0;
+            display: none;
+            background-color: yellow;
+            list-style-type: none;
+        }
+        .submenu a {
+            color: blue;
+        }
+        .submenu-link::after {
+            content: "\25bc";
+            font-size: small;
+        }
+
+        main {margin-bottom: 2em;}
+        aside {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            right: 65%;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 90%
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Postioning</h1></header>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="speaker.html">Speakers<small>&#9660;</small></a></li>
+            <li>
+                <a href="aboutus.html" class="submenu-link">About Us</a>
+                <ul class="submenu">
+                    <li><a href="tickets.html">Get Tickets</a></li>
+                    <li><a href="member.html">Become a member</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>Some where out there, beneath the </section>
+        <aside>
+            This absolutely positioned sidebar isn't in the flow of the page.
+            • inherit: Takes the align-items value from the parent element.
+• initial: Sets the property to its default value (stretch).
+• unset: Resets the property to its natural inherited or initial state.
+Learn more detailed syntax and live interactive examples on the MDN Web Docs align-items Reference or review table breakdowns on W3Schools CSS align-items.
+Are you working with a flexbox or grid layout right now, and which cross-axis alignment are you trying to achieve?
+        </aside>
+    </main>
+    <footer>This is Footloose!</footer>
+</body>
+</html>

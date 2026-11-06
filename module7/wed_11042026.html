@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav with Flexbox</title>
+    <!--
+    Author: PoChin Cheng
+    Date: 11.04.2026
+    -->
+    <style>
+        nav {
+            background-color: lightgray;
+        }
+        ul {
+            display: flex;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            /* justify-content: flex-end; */
+            list-style-type: none;
+            align-items: center;
+            min-height: 5em;
+        }
+        a {
+            color: white;
+            display: block;
+            padding: .5em 1em;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            text-decoration: underline;
+        }
+        a.current {
+            color: purple;
+            background-color:  lightgray;
+            text-decoration: none;
+        }
+        li {
+            /* padding: .5em 1em; */
+            /* margin: .25em; */
+            background-color: black;
+        }
+        li:hover {
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="speaker.html">Speakers</a></li>
+            <li><a href="tickets.html">Get Tickets</a></li>
+            <li><a href="member.html">Become a member</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    <section id="section1">
+        <h2>Section 1</h2>
+    </section>
+</body>
+</html>
