@@ -1,0 +1,76 @@
+/*
+    Author: PoChin Cheng
+*/
+
+:root {
+    --my-color: #123456; /* custom variable */
+    --my-color: red; /* custom variable */
+}
+
+#text-demo {
+    margin: 5rem;
+}
+
+.center-align {
+    text-align: center;
+    background-color: var(--my-color);
+}
+
+.floating-img {
+    padding: 5rem;
+    float: right;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.text-indentation {
+    text-indent: 10rem;
+    color: blue;
+}
+
+.text-decorate1 {
+    text-decoration: underline wavy;
+    color: orange;
+}
+
+.text-decorate2 {
+    text-decoration: line-through;
+}
+
+.btn-hover:hover {
+    color: blue;
+    background-color: yellow;
+}
+
+.btn-focus:focus {
+    color: red;
+    background-color: green;
+}
+
+/* pseudo elements is accessed by :: */
+.first-line-demo::first-line {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+.first-letter-demo::first-letter{
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+.list-demo li:nth-child(3n) {
+    background-color: #f1f5f9;
+    font-size 8rem;
+    font-family: fantasy;
+}
+
+.list-demo li:nth-child(3n+1) {
+    background-color: #e1f5f9;
+    font-size 8rem;
+    font-family: fantasy;
+}

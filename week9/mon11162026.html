@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive menu</title>
+    <style>
+        .navbar {
+            position: relative;
+            background-color: teal;
+            & a {
+                display: block;
+                padding: .25em 1em;
+                margin: .25em;
+                text-decoration: none;
+                color: yellow;
+            }
+            & a:hover, a:focus {
+                text-decoration: underline;
+            }
+            & a.current {
+                border: 2px solid;
+                border-radius: 10px;
+                text-decoration: none;
+            }
+            & ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .menu {
+            position: absolute;  /* in relation to .navbar */
+            left: 0;
+            display: none;       /* menu initially hidden */
+            background-color: teal;
+        }
+        .menu li:has(.submenu) {
+            position: relative;
+            & small::after {
+                content: "\25b6";
+            }
+            & small {
+                margin-left: .25em;
+            }
+            &:hover > .submenu {
+                display: block;
+            }
+        }
+        #checkbox-toggle { display: none; } /* checkbox alway hidden */
+        .menu-btn {                         /* show menu button */
+            display: block;
+            padding: 0.25em 1em;
+            color: yellow;
+            font-size: 24px;
+        }
+        .menu-btn::after { content: "\2630"; } /* hambuger symbol */
+        #checkbox-toggle:checked ~ .menu {
+            display: block;
+        }
+        #checkbox-toggle:checked ~ .menu-btn::after {
+            content: "\2716"; /* close (x) symbol */
+        }
+
+        @media only screen and (min-width: 750px) {
+            .menu {
+                position: relative;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .menu-btn { display: none; }
+            /* #checkbox-toggle:checked ~ .menu { display: flex; } */
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav class="navbar">
+        <input type="checkbox" id="checkbox-toggle" />
+        <label for="checkbox-toggle" class="menu-btn">abc</label>
+
+        <ul class="menu">
+            <li><a class="current">Home</a></li>
+            <li><a href="#">Speakers<small></small></a>
+                <ul class="submenu">
+                    <li><a href="#">David Brancaccio</a></li>
+                    <li><a href="#">Ronan Tynan</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Get Tickets</a></li>
+            <li><a href="#">Become a Member</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+    <main><section></section><aside></aside></main><footer></footer>
+</body>
+</html>

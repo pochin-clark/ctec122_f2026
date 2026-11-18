@@ -1,0 +1,50 @@
+/*
+    Author: PoChin Cheng
+*/
+
+* {
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+:root {
+    --my-color: #123456; /* custom variable */
+    --my-color: red; /* custom variable */
+}
+
+body {margin: 1rem}
+
+#text-demo {margin: 2rem;}
+
+.center-align {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 20em 0 20em; /* specified all 4 sides */
+    margin-left: 10em; margin-right: 10em; /* use specific properties */
+    margin: 5rem; /* applies to all 4 sides */
+    margin: 2rem 5rem; /* using pair to specified all 4 sides */
+    /* background-color: var(--my-color);
+    border: 1em dashed rgb(128, 128, 128);
+    outline: 1em dashed #000;
+    outline-offset: 1em; */
+    border-radius: 1em;
+    padding: 5px;
+}
+
+#background-demo {
+    background: #0f172a radial-gradient(circle at center, #2563eb 0%, #0f172a 70%) no-repeat scroll center / cover;
+    background-color: #0f172a;
+    background-image: url('https://www.clark.edu/news-and-media/media-resources/brand_logos/images/ClarkCollege-ReverseBlue.png');
+    /* background-image: radial-gradient(circle at center, #2563eb 0%, #0f172a 70%);
+    background-image: linear-gradient(to bottom right, red, blue, red);
+    background-image: url('https://via.placeholder.com/120'); */
+    background-size: auto;
+    background-repeat: repeat-x;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* min-height: 200px; */
+}
